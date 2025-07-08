@@ -226,7 +226,7 @@ pipeline {
                        script {
                            withAWS(credentials: 'access-key', region: "${params.AWS_REGION}") {
                                   writeFile file: 'terraform.tfvars', text: """
-                                  ecr_image_uri = "205930632952.dkr.ecr.us-west-2.amazonaws.com/projectme-ak:latest"
+                                  ecr_image_uri = "324037274946.dkr.ecr.us-west-2.amazonaws.com/projectme-emstev:latest"
                                   cluster_name = "${params.CLUSTER_NAME}"
                                   region = "${params.AWS_REGION}"
                                   service_type = "LoadBalancer"
