@@ -2,7 +2,7 @@ pipeline {
        agent any
 
        parameters {
-           string(name: 'AWS_ACCOUNT_ID', defaultValue: '205930632952', description: 'AWS Account ID')
+           string(name: 'AWS_ACCOUNT_ID', defaultValue: '324037274946', description: 'AWS Account ID')
            string(name: 'AWS_REGION', defaultValue: 'us-west-2', description: 'AWS Region')
            string(name: 'IMAGE_TAG', defaultValue: '', description: 'Docker image tag (leave blank to use build number and commit hash)')
            string(name: 'CLUSTER_NAME', defaultValue: 'ecom-cluster', description: 'EKS Cluster Name')
