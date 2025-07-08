@@ -84,7 +84,7 @@ pipeline {
                    script {
                        try {
                            withAWS(credentials: 'access-key', region: "${params.AWS_REGION}") {
-                               sh "aws ecr describe-repositories --repository-names projectme-ak --region ${params.AWS_REGION} || aws ecr create-repository --repository-name projectme-ak --region ${params.AWS_REGION}"
+                               sh "aws ecr describe-repositories --repository-names projectme-emstev --region ${params.AWS_REGION} || aws ecr create-repository --repository-name projectme-emstev --region ${params.AWS_REGION}"
                            }
                        } catch (Exception e) {
                            echo "Failed to ensure ECR repository: ${e.message}. Assuming repository exists."
