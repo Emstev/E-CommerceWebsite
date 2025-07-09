@@ -71,7 +71,7 @@ pipeline {
                        }
                        env.AWS_ACCOUNT_ID = awsAccountId
                        env.CLUSTER_NAME = clusterName
-                       env.DOCKER_IMAGE = "${awsAccountId}.dkr.ecr.${params.AWS_REGION}.amazonaws.com/projectme-ak:${env.IMAGE_TAG}"
+                       env.DOCKER_IMAGE = "${awsAccountId}.dkr.ecr.${params.AWS_REGION}.amazonaws.com/projectme-emstev:${env.IMAGE_TAG}"
                    }
                }
            }
