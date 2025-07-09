@@ -18,7 +18,7 @@ terraform {
         bucket         = "ecommerce-terraform-state-sr-324037274946"
         key            = "terraform.tfstate"
         region         = "eu-west-2"
-        dynamodb_table = "ecommerce-terraform-locks"
+        dynamodb_table = "ecommerce-terraform-locks-sr"
     }
 }
 
