@@ -3,7 +3,7 @@ pipeline {
 
        parameters {
            string(name: 'AWS_ACCOUNT_ID', defaultValue: '324037274946', description: 'AWS Account ID')
-           string(name: 'AWS_REGION', defaultValue: 'us-west-2', description: 'AWS Region')
+           string(name: 'AWS_REGION', defaultValue: 'eu-west-2', description: 'AWS Region')
            string(name: 'IMAGE_TAG', defaultValue: '', description: 'Docker image tag (leave blank to use build number and commit hash)')
            string(name: 'CLUSTER_NAME', defaultValue: 'ecom-cluster', description: 'EKS Cluster Name')
            string(name: 'TEST_PORT', defaultValue: '8081', description: 'Host port for testing Docker image (use 0 for random port)')
@@ -226,7 +226,7 @@ pipeline {
                        script {
                            withAWS(credentials: 'access-key', region: "${params.AWS_REGION}") {
                                   writeFile file: 'terraform.tfvars', text: """
-                                  ecr_image_uri = "324037274946.dkr.ecr.us-west-2.amazonaws.com/projectme-emstev:latest"
+                                  ecr_image_uri = "324037274946.dkr.ecr.eu-west-2.amazonaws.com/projectme-emstev:latest"
                                   cluster_name = "${params.CLUSTER_NAME}"
                                   region = "${params.AWS_REGION}"
                                   service_type = "LoadBalancer"
