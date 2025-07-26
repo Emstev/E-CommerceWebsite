@@ -134,7 +134,7 @@ pipeline {
                             
                             echo "✅ Web application is responding correctly"
                             
-                            // REMOVED: CSS and JS checks since these files don't exist
+                            // REMOVED: CSS and JS checks since these files don't exist.
                             // If you add these files later, uncomment the checks below:
                             /*
                             def cssResponse = sh(script: "curl -s -o /dev/null -w '%{http_code}' http://localhost:${testPort == 0 ? '80' : testPort}/css/style.css", returnStdout: true).trim()
