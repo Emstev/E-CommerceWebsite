@@ -1,4 +1,4 @@
-# Terraform configuration for provisioning S3 bucket and DynamoDB table for backend
+#Terraform configuration for provisioning S3 bucket and DynamoDB table for backend.
 terraform {
     required_providers {
         aws = {
