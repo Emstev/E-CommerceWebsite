@@ -19,8 +19,6 @@ This project demonstrates a complete CI/CD workflow to deploy an **E-commerce we
 
 ## 🧱 Project Architecture
 
-```mermaid
-graph TD
     GitHub--Push Code-->Jenkins
     Jenkins--Trigger Build-->Docker
     Docker--Build Image-->ECR
